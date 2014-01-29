@@ -46,7 +46,7 @@ ruby "2.1.0"
 # Use unicorn as the app server
 gem 'unicorn'
 
-gem 'devise', '3.0.0.rc'
+gem 'devise', '3.2.2'
 
 gem 'sass'
 
