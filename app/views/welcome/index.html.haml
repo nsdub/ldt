@@ -1,2 +1,8 @@
 %h2 Oh Hai there!
 %iframe{allowfullscreen: "", frameborder: "0", height: "480", src: @youtube_link, width: "853"}
+
+%h3 Registered Users Only
+= link_to "Submit a new video suggestion", ideas_path 
+
+%h4 Admin Only
+= link_to "Add videos to database", videos_path 

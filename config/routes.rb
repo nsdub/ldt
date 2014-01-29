@@ -1,4 +1,6 @@
 Ldt::Application.routes.draw do
+  resources :ideas
+
   resources :videos
 
   devise_for :users

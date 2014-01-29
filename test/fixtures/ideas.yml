@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  creator_id: 1
+  video_url: MyString
+  created_at: 2014-01-29 14:20:20
+
+two:
+  creator_id: 1
+  video_url: MyString
+  created_at: 2014-01-29 14:20:20
