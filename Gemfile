@@ -50,6 +50,8 @@ gem 'devise', '3.0.0.rc'
 
 gem 'sass'
 
+gem 'google-tag-manager-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
