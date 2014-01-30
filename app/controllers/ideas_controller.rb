@@ -1,7 +1,8 @@
 class IdeasController < ApplicationController
+  load_and_authorize_resource
   before_action :authenticate_user!
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /ideas
   # GET /ideas.json
   def index

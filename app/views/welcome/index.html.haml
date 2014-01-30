@@ -1,8 +1,17 @@
 %h2 Oh Hai there!
 %iframe{allowfullscreen: "", frameborder: "0", height: "480", src: @youtube_link, width: "853"}
 
-%h3 Registered Users Only
+%h3 Registered Users Only 
+
 = link_to "Submit a new video suggestion", ideas_path 
 
-%h4 Admin Only
+%h3 Admin Only
+
 = link_to "Add videos to database", videos_path 
+  
+= link_to "Sign out", destroy_user_session_path, :method => :delete
+
+= link_to "Sign up", new_user_registration_path
+
+- if current_user
+  %p current_user works!

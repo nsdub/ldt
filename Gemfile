@@ -52,6 +52,10 @@ gem 'sass'
 
 gem 'google-tag-manager-rails'
 
+gem 'protected_attributes'
+
+gem 'binding_of_caller'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
