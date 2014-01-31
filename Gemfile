@@ -58,6 +58,10 @@ gem 'binding_of_caller'
 
 gem 'bootstrap-sass'
 
+group :development do
+  gem 'rails_layout'
+end
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
