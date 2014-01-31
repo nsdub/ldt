@@ -1,7 +1,7 @@
 Ldt::Application.routes.draw do
-  resources :ideas
-
   resources :videos
+
+  resources :ideas
 
   devise_for :users
   root 'welcome#index'

@@ -1,5 +1,4 @@
 class IdeasController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
 
   # GET /ideas
@@ -70,6 +69,6 @@ class IdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:creator_id, :video_url, :created_at)
+      params.require(:idea).permit(:creator_id, :title, :video_url)
     end
 end

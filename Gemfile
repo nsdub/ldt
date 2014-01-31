@@ -40,6 +40,8 @@ gem 'better_errors'
 
 ruby "2.1.0"
 
+gem 'devise', '~> 3.2.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

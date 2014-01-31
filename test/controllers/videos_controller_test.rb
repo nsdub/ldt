@@ -18,7 +18,7 @@ class VideosControllerTest < ActionController::TestCase
 
   test "should create video" do
     assert_difference('Video.count') do
-      post :create, video: { link_url: @video.link_url, name: @video.name }
+      post :create, video: { title: @video.title, url: @video.url }
     end
 
     assert_redirected_to video_path(assigns(:video))
@@ -35,7 +35,7 @@ class VideosControllerTest < ActionController::TestCase
   end
 
   test "should update video" do
-    patch :update, id: @video, video: { link_url: @video.link_url, name: @video.name }
+    patch :update, id: @video, video: { title: @video.title, url: @video.url }
     assert_redirected_to video_path(assigns(:video))
   end
 
