@@ -1,5 +1,4 @@
 class VideosController < ApplicationController
-  load_and_authorize_resource
   before_action :authenticate_user!
   before_action :set_video, only: [:show, :edit, :update, :destroy]
 
@@ -7,6 +6,7 @@ class VideosController < ApplicationController
   # GET /videos.json
   def index
     @videos = Video.all
+    
   end
 
   # GET /videos/1

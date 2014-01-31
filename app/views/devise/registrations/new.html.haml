@@ -14,7 +14,5 @@
     %br/
     = f.password_field :password_confirmation
     
-    / Hidden field to set registrants' roles as members
-    = f.hidden_field :role, value: "member"
   %div= f.submit "Sign up"
 = render "devise/shared/links"
