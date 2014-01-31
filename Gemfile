@@ -48,8 +48,6 @@ gem 'devise', '~> 3.2.2'
 # Use unicorn as the app server
 gem 'unicorn'
 
-gem 'devise', '3.2.2'
-
 gem 'sass'
 
 gem 'google-tag-manager-rails'
@@ -57,6 +55,8 @@ gem 'google-tag-manager-rails'
 gem 'protected_attributes'
 
 gem 'binding_of_caller'
+
+gem 'bootstrap-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development

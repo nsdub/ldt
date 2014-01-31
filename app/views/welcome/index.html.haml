@@ -3,13 +3,12 @@
 
 %h3 Registered Users Only 
 
-
-= link_to "Submit a new video suggestion", ideas_path 
+- if current_user
+  = link_to "Submit a new video suggestion", ideas_path 
 
 %h3 Admin Only
-- if current_user
-  - if current_user.admin?
-    = link_to "Add videos to database", videos_path 
+- if current_user and current_user.admin?
+  = link_to "Add videos to database", videos_path 
   
 - if current_user  
   = link_to "Sign out", destroy_user_session_path, :method => :delete
