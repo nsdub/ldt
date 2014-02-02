@@ -37,9 +37,13 @@ main {
   background-image: image-url("45degree_fabric.png");
   padding-bottom: 80px;
   width: 100%;
+  text-align: center;
 //  margin-top: 51px; // accommodate the navbar
   }
 section {
   @extend .row;
   margin-top: 20px;
   }
+.clear-floats {
+  clear: both;
+}
