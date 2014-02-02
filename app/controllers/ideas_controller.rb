@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :is_admin!, except: [:new, :create]
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
 
   # GET /ideas
