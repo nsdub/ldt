@@ -58,6 +58,8 @@ gem 'binding_of_caller'
 
 gem 'bootstrap-sass'
 
+gem 'mousetrap-rails'
+
 group :development do
   gem 'rails_layout'
 end

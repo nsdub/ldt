@@ -1,5 +1,13 @@
-%h2 Oh Hai there!
-%iframe{allowfullscreen: "", frameborder: "0", height: "480", src: @youtube_link, width: "853"}
+:javascript
+  $(document).ready(function(){
+      $('iframe').attr('width',$(window).width() * 0.7);
+      $('iframe').attr('height',($('iframe').attr('width') * (9/16)));
+  })
+  
+
+%h1 Laugh, Don't Think
+%iframe{allowfullscreen: "", frameborder: "0", src: @youtube_link }
+= link_to 'New Video (press Space key)', root_path, data: { keybinding: 'space' } 
 
 %h3 Registered Users Only 
 
