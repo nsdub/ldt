@@ -1,0 +1,16 @@
+:javascript
+  $(document).ready(function() {
+
+     var docHeight = $(window).height();
+     var footerHeight = $('#footer').height();
+     var footerTop = $('#footer').position().top + footerHeight;
+
+     if (footerTop < docHeight) {
+      $('#footer').css('margin-top', -8 + (docHeight - footerTop) + 'px');
+     }
+    });
+
+#footer
+  %p 
+    Created by
+    = link_to "Nathaniel Sokoll-Ward", 'http://www.nsdub.com', target: "_blank"

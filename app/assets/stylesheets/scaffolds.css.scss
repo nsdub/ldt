@@ -1,13 +1,20 @@
+@import "variables.css.scss";
+
+body, a, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
 body {
   background-color: #fff;
-  color: #333;
+  color: $text-color;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+p, ol, ul, td, span {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
   font-size: 13px;
   line-height: 18px;
 }
@@ -19,13 +26,13 @@ pre {
 }
 
 a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
+  color: $text-color;
+//  &:visited {
+//    color: #666;
+//  }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    text-decoration: underline;
+    color: $text-color;
   }
 }
 

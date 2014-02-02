@@ -6,28 +6,14 @@
       $('#menu').attr('style', 'width:' + iframe_width + 'px');
   })
 
-:css
-    #menu {margin: 0 auto;}
-
 %h1 Laugh, Don't Think
 %iframe{allowfullscreen: "", frameborder: "0", src: @youtube_link }
 #menu
-  = link_to "Sign up", new_user_registration_path, style: "float: left;"
-  = link_to 'New Video (press Space key)', root_path, data: { keybinding: 'space' }, style: "float: right;"
+  - if current_user.admin?
+    = link_to "Add videos to database", videos_path, class: "user-action"
+  - else
+    = link_to "Submit a new video suggestion", ideas_path, class: "user-action"
+  = link_to 'Next Video (press Space key)', root_path, data: { keybinding: 'space' }, class: "video-action"
   .clear-floats
+    
 
-%h3 Registered Users Only 
-
-- if current_user
-  = link_to "Submit a new video suggestion", ideas_path 
-
-%h3 Admin Only
-- if current_user and current_user.admin?
-  = link_to "Add videos to database", videos_path 
-  
-- if current_user  
-  = link_to "Sign out", destroy_user_session_path, :method => :delete
-- else
-
-= link_to "Sign up", new_user_registration_path
-= link_to "Sign in", new_user_session_path

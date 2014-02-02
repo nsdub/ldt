@@ -1,3 +1,6 @@
+// Google web fonts
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+
 // import the CSS framework
 @import "bootstrap";
 
@@ -6,6 +9,7 @@ img {
   @extend .img-responsive;
   margin: 0 auto;
   }
+
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
@@ -32,11 +36,12 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
+
+body{ background-image: image-url("45degree_fabric.png"); }
 main {
   @extend .container;
-  background-image: image-url("45degree_fabric.png");
-  padding-bottom: 80px;
   width: 100%;
+  height: 100%;
   text-align: center;
 //  margin-top: 51px; // accommodate the navbar
   }
@@ -46,4 +51,13 @@ section {
   }
 .clear-floats {
   clear: both;
+}
+
+// Using navbar positioned to bottom as the footer
+.navbar, .navbar-default {
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  position: relative;
 }
