@@ -30,8 +30,8 @@ class IdeasController < ApplicationController
 
     respond_to do |format|
       if @idea.save
-        format.html { redirect_to @idea, notice: 'Idea was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @idea }
+        format.html { redirect_to @idea, notice: 'Your video suggestion was successfully received.' }
+        format.json { redirect_to @idea, status: :created, location: @idea }
         flash[:notice] = "Idea successfully created"
       else
         format.html { render action: 'new' }

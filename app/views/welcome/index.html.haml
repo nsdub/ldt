@@ -9,8 +9,13 @@
 %h1 Laugh, Don't Think
 %iframe{allowfullscreen: "", frameborder: "0", src: @youtube_link }
 #menu
-  - if current_user.admin?
-    = link_to "Add videos to database", videos_path, class: "user-action"
+  - if current_user
+    - if current_user.admin?
+      = link_to "View submitted ideas", ideas_path, class: "user-action"
+      |
+      = link_to "Add videos to database", videos_path, class: "user-action"
+    - else 
+      = link_to "Submit a new video suggestion", new_idea_path, class: "user-action"
   - else
     = link_to "Submit a new video suggestion", new_idea_path, class: "user-action"
   = link_to 'Next Video (press Space key)', root_path, data: { keybinding: 'space' }, class: "video-action"

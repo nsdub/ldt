@@ -1,0 +1,16 @@
+= form_for(@idea) do |f|
+  - if @idea.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@idea.errors.count, "error")
+        prohibited this idea from being saved:
+      %ul
+        - @idea.errors.full_messages.each do |msg|
+          %li= msg
+  = f.hidden_field :creator_id, {:value => current_user.id}
+  .field
+    = f.text_field :title, :placeholder => "Video Title", :type => "text", :class => "form-control"
+  .field
+    = f.text_field :video_url, :placeholder => "Video URL", :type => "text", :class => "form-control"
+  .actions
+    %input{ name: "commit", type: "submit", value: "Submit Suggestion", class: "btn btn-primary"}
