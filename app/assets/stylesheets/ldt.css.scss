@@ -24,10 +24,8 @@ form{
     }
   }
   .btn-primary { margin: 10px 0 ;}
-  
-  a {
-    &:nth-child(3) {
-      margin-top: 10px;
-    }
-  }
+}
+
+.form_link{
+  margin-bottom: 10px;
 }
