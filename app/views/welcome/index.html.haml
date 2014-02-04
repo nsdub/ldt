@@ -13,8 +13,6 @@
     - if current_user.admin?
       .user-action
         = link_to "View submitted ideas", ideas_path
-        |
-        = link_to "Add videos to database", videos_path
     - else 
       = link_to "Submit a new video suggestion", new_idea_path, class: "user-action"
   - else

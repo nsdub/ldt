@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Creator:
+  = @idea.creator_id
+%p
+  %strong Title:
+  = @idea.title
+%p
+  %strong Video url:
+  = @idea.video_url
+= link_to 'Edit', edit_idea_path(@idea)
+|
+= link_to 'Back', ideas_path

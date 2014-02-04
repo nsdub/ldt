@@ -1,6 +1,5 @@
 class Idea < ActiveRecord::Base
-  
-  attr_accessible :creator_id, :video_url, :title
+  attr_accessible :creator_id, :video_url, :title, :published_at
   
   validates :creator_id, presence: true
   validates :title, presence: true
@@ -11,4 +10,7 @@ class Idea < ActiveRecord::Base
       find(:first, :offset =>rand(c))
     end
   end
+  
+  def published?() published_at.nil? ? false : true end
+
 end

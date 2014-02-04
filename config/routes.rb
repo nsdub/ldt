@@ -1,7 +1,10 @@
 Ldt::Application.routes.draw do
-  resources :videos
-
-  resources :ideas
+  resources :ideas do
+    member do
+      get :publish
+      get :unpublish
+    end
+  end
 
   devise_for :users
   root 'welcome#index'

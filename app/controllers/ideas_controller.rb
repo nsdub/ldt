@@ -10,7 +10,25 @@ class IdeasController < ApplicationController
   end
   
   def publish
-    attributes = @idea.attributes
+    @idea = Idea.find(params[:id])
+    @idea.published_at = Time.now
+    if @idea.save
+      flash[:success] = "Video has been successfully published."
+    else
+      flash[:error] = "There was an error publishing."
+    end
+    redirect_to ideas_path
+  end
+  
+  def unpublish
+    @idea = Idea.find(params[:id])
+    @idea.published_at = nil
+    if @idea.save
+      flash[:success] = "Video has been unpublished."
+    else
+      flash[:error] = "There was an error unpublishing."
+    end
+    redirect_to ideas_path
   end
 
   # GET /ideas/1
@@ -31,12 +49,15 @@ class IdeasController < ApplicationController
   # POST /ideas.json
   def create
     @idea = Idea.new(idea_params)
+    if current_user.admin?
+      @idea.published_at = Time.now
+    end
 
     respond_to do |format|
       if @idea.save
-        format.html { redirect_to @idea, notice: 'Your video suggestion was successfully received.' }
+        format.html { redirect_to new_idea_path, notice: 'Your video suggestion was successfully received.' }
         format.json { redirect_to @idea, status: :created, location: @idea }
-        flash[:notice] = "Idea successfully created"
+        flash[:notice] = "Your video suggestion was successfully received."
       else
         format.html { render action: 'new' }
         format.json { render json: @idea.errors, status: :unprocessable_entity }
