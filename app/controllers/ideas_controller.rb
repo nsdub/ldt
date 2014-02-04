@@ -8,6 +8,10 @@ class IdeasController < ApplicationController
   def index
     @ideas = Idea.all
   end
+  
+  def publish
+    attributes = @idea.attributes
+  end
 
   # GET /ideas/1
   # GET /ideas/1.json
