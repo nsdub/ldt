@@ -3,7 +3,7 @@
     #error_explanation
       %h2
         = pluralize(@idea.errors.count, "error")
-        prohibited this idea from being saved:
+        prohibited this suggestion from being submitted:
       %ul
         - @idea.errors.full_messages.each do |msg|
           %li= msg

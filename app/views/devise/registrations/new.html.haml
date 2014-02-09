@@ -4,7 +4,7 @@
   .field
     = f.email_field :email, :placeholder => "Email", :type => "text", :class => "form-control"
   .field
-    = f.password_field :password, :placeholder => "Password", :class => "form-control"
+    = f.password_field :password, :placeholder => "Password (min 8 char.)", :class => "form-control"
     
   %div
     %input{ name: "commit", type: "submit", value: "Sign up", class: "btn btn-primary"}
