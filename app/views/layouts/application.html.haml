@@ -4,6 +4,9 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "Laugh, Don't Think"
     %meta{content: content_for?(:description) ? yield(:description) : "Ldt", name: "description"}/
+    %meta{ property: "og:title", content: "Laugh, Don't Think" } 
+    %meta{ property: "og:description", content: "Watch funny videos, no thinking required." } 
+    %meta{ property: "og:image", content: "assets/images/crazy_dog.png" }
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
